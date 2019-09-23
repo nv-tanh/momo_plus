@@ -10,7 +10,7 @@ const index = () => {
   return (
     <View style={styles.container}>
       <Header />
-      <ScrollView>
+      <ScrollView contentContainerStyle={styles.scrollContainer}>
         <Categories />
         <Brands />
         <Recommend />
@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#E9EBEE',
+  },
+  scrollContainer: {
+    marginHorizontal: 15,
   },
 });
 

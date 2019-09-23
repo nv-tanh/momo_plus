@@ -62,7 +62,6 @@ const index = () => {
 
 const styles = StyleSheet.create({
   container: {
-    marginHorizontal: 15,
     marginVertical: 20,
   },
   title: {

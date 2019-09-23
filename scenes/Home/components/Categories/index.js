@@ -53,7 +53,6 @@ const index = () => {
 
 const styles = StyleSheet.create({
   categoriesContainer: {
-    marginHorizontal: 15,
     marginVertical: 20,
   },
   title: {
