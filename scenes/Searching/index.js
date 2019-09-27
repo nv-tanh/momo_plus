@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import {SearchBar} from 'react-native-elements';
 
+import MySearchBar from './SearchBar/index';
+
 export default class Searching extends React.Component {
   constructor(props) {
     super(props);
@@ -85,14 +87,19 @@ export default class Searching extends React.Component {
     return (
       //ListView to show with textinput used as search bar
       <View style={styles.viewStyle}>
-        <SearchBar
+        <MySearchBar
+          onChangeText={text => this.SearchFilterFunction(text)}
+          placeholder="Type Here..."
+          value={this.state.search}
+        />
+        {/* <SearchBar
           round
           searchIcon={{size: 24}}
           onChangeText={text => this.SearchFilterFunction(text)}
           onClear={text => this.SearchFilterFunction('')}
           placeholder="Type Here..."
           value={this.state.search}
-        />
+        /> */}
         <FlatList
           data={this.state.dataSource}
           ItemSeparatorComponent={this.ListViewItemSeparator}

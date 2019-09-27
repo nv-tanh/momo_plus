@@ -1,12 +1,21 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {Text} from 'react-native';
+// import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 
-const index = () => {
-  return (
-    <View>
-      <Text>Maps</Text>
-    </View>
-  );
-};
-
-export default index;
+export default class index extends React.Component {
+  render() {
+    return (
+      // <MapView
+      //   provider={PROVIDER_GOOGLE}
+      //   style={{flex: 1}}
+      //   initialRegion={{
+      //     latitude: 37.78825,
+      //     longitude: -122.4324,
+      //     latitudeDelta: 0.0922,
+      //     longitudeDelta: 0.0421,
+      //   }}
+      // />
+      <Text>Search</Text>
+    );
+  }
+}

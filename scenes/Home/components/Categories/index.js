@@ -13,7 +13,7 @@ const CategoriesIcon = props => {
           color="white"
           name={props.name}
           type={props.type}
-          size={35}
+          size={30}
           containerStyle={styles.iconContainer}
           iconStyle={styles.iconStyle}
           onPress={() => console.warn('hello')}

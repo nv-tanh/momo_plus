@@ -84,6 +84,8 @@ const tabNavigator = createBottomTabNavigator(
       activeTintColor: '#e91e63',
       inactiveTintColor: '#808080',
     },
+
+    initialRouteName: 'Maps',
   },
 );
 

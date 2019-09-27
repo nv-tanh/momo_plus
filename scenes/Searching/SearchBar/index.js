@@ -5,7 +5,15 @@ import {Icon, SearchBar} from 'react-native-elements';
 class index extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      searchValue: '',
+    };
   }
+
+  updateSearch = value => {
+    this.props.onChangeText(value);
+    this.setState({searchValue: value});
+  };
 
   render() {
     return (
@@ -19,14 +27,15 @@ class index extends React.Component {
         />
         <SearchBar
           lightTheme
-          placeholder="Type here..."
-          onChangeText={this.updateSearch}
-          inputContainerStyle={styles.searchbar}
           round
+          placeholder="Type here..."
+          onChangeText={text => this.updateSearch(text)}
+          inputContainerStyle={styles.searchbar}
           containerStyle={styles.searchcontainer}
+          value={this.state.searchValue}
         />
         <Icon
-          name="bell"
+          name="filter"
           type="feather"
           color="white"
           size={30}
